@@ -1,0 +1,5 @@
+/* PRESENTATION only. How it looks, never what it does. */
+body { font-family: system-ui, sans-serif; max-width: 40rem; margin: 2rem auto; padding: 0 1rem; }
+form { display: flex; gap: .5rem; }
+input { flex: 1; padding: .5rem; }
+li { padding: .5rem 0; border-bottom: 1px solid #ddd; list-style: none; }
