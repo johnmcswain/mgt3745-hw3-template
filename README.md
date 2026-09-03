@@ -78,7 +78,15 @@ Read in this order:
 
 ## AI Use
 
-[What Copilot or any other tool drafted, and what you inspected or changed. A paragraph is enough this week.]
+<!-- A Delegation Decision Record without the name. From HW5 this becomes a formal DDR. -->
+
+**What was delegated:** [Which parts a tool drafted: e.g. "Copilot drafted render() and the CSS."]
+
+**Why:** [The reason it made sense to delegate that part rather than write it.]
+
+**How it was checked:** [What you inspected, what you changed, what you caught. "Replaced innerHTML with textContent" is the kind of sentence that belongs here.]
+
+**Actual hours on this assignment:** [A number. Never graded; used to calibrate future assignments.]
 
 <!-- Things this README could also do, if they earn their place:
      - GitHub alerts:  > [!NOTE]  > [!WARNING]  > [!TIP]
