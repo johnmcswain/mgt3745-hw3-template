@@ -1,5 +1,12 @@
 // BEHAVIOR and DATA. Follow context/STANDARDS.md.
-// Pattern: load (read what persists), save (write what persists), render (draw current state).
+//
+// If you have never written code: you do not need to understand every symbol here.
+// Find the three functions named load, save, and render. That is the whole pattern:
+//   load   reads what was stored last time
+//   save   writes the current list so it survives a reload
+//   render draws the list on the page
+// Everything else is wiring. Highlight any line and ask Copilot to explain it.
+//
 
 const KEY = 'entries';   // rename to match your feature
 const form = document.querySelector('#entry-form');

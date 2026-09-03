@@ -4,7 +4,8 @@
 ![Status](https://img.shields.io/badge/status-in%20progress-yellow)
 ![Module](https://img.shields.io/badge/MGT%203745-HW3-051E39)
 
-> HW3, MGT 3745 O. Replace every bracketed prompt. Delete the HTML comments when done.
+> HW3, MGT 3745 O. Replace every [bracketed prompt] with your own writing.
+> Lines between `<!--` and `-->` are notes to you. They are invisible on GitHub. Delete them when done.
 > This README is the first thing an employer, a teammate, or an agent reads. It makes
 > a case for the repository. Show, then tell.
 
@@ -28,8 +29,17 @@ For the full story: [`PROJECT.md`](context/PROJECT.md) frames the problem, [`FEA
 
 ## How to Run
 
-1. [Exact steps. "Open `index.html` in a browser" is acceptable if true.]
-2. [If it needs a Codespace, say so.]
+This project runs inside a GitHub Codespace. No local install.
+
+1. On the repository page, click **Code → Codespaces → Create codespace on main**. First boot takes about a minute.
+2. In the file explorer, right-click `index.html` and choose **Open with Live Server**.
+3. A browser tab opens automatically at the forwarded port (`https://…-5500.app.github.dev`). If it does not, open the **Ports** tab in the terminal panel and click the globe icon next to port 5500.
+4. Edit any file; Live Server reloads the page on save.
+
+<!-- The .devcontainer folder installs Live Server automatically. If the right-click option
+     is missing, wait for the extension to finish installing (bottom-left status bar), or run
+     `python3 -m http.server 5500` in the terminal and open port 5500 from the Ports tab.
+     Edit these steps if your feature needs anything more. -->
 
 ## How It Works
 
