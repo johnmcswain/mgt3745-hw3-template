@@ -1,3 +1,5 @@
-# USERS.md
+# USERS
 
-> Copy your HW2 USERS.md here in full. Apply any revisions from HW2 feedback.
+Status: ACTIVE.
+
+Copy HW2 research; label reported, observed, inferred evidence. Replace this guidance with your own prior work; do not invent evidence.

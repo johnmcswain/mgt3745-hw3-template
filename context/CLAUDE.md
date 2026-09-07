@@ -1,18 +1,7 @@
-# CLAUDE.md
+# Canonical agent instructions
 
-> Always-on instructions for AI agents working in this repository. Loaded automatically
-> by Copilot and Claude Code from the repo root. Imperative sentences. Same five rules
-> as STANDARDS.md, written as instructions.
+Status: ACTIVE in Module 3. Read context/STANDARDS.md and the selected scope in FEATURES.md before editing. STANDARDS.md is normative; report and repair conflicting instruction wording.
 
-## Project
-This repository is [one sentence]. See context/PROJECT.md and context/FEATURES.md before proposing changes.
+Use descriptive camelCase names and lexical scope. Keep HTML, CSS, and JavaScript separate. Explain significant reasons in comments. Use meaningful commit messages. Insert user text with textContent; do not use innerHTML for it. Label controls and preserve unsaved input after a failed write. Verify expected behavior before claiming completion. Never invent interview evidence or test results. Leave preview files as previews.
 
-## Rules
-1. [Naming rule, as an instruction. e.g. "Use camelCase (likeThis) for variables and functions. Use kebab-case (like-this) for file names."]
-2. [Structure rule, as an instruction.]
-3. [Comment rule, as an instruction. e.g. "When writing comments, explain why the code exists. Do not restate what it does."]
-4. [Commit rule, as an instruction.]
-5. [Forbidden pattern, as an instruction. e.g. "Never assign user-supplied text to innerHTML; use textContent. Never leave console.log statements in committed code."]
-
-## When Unsure
-Ask before assuming. Do not invent requirements that are not in context/FEATURES.md.
+Root CLAUDE.md imports this file for Claude Code. VS Code Copilot uses the separate .github/copilot-instructions.md adapter. A location under /context alone is not a guarantee of automatic discovery.

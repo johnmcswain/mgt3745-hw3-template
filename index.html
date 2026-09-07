@@ -2,19 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>[Feature name]</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meeting notes | MGT 3745 starter</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
 </head>
 <body>
-  <!-- STRUCTURE only. No inline styles. No script beyond the tag below. -->
   <main>
-    <h1>[Feature name]</h1>
-    <form id="entry-form">
-      <input id="entry-text" type="text" placeholder="[what goes here?]" required>
-      <button type="submit">Save</button>
+    <h1>Meeting notes</h1>
+    <p>Keep short notes in this browser. Use fictional, non-sensitive information.</p>
+    <form id="note-form" novalidate>
+      <label for="note-input">New note</label>
+      <p id="note-help">Enter 1–200 characters. Notes stay in this browser profile and site only.</p>
+      <input id="note-input" name="note" type="text" aria-describedby="note-help note-error" autocomplete="off">
+      <button type="submit">Save note</button>
+      <p id="note-error" role="alert"></p>
     </form>
-    <ul id="entry-list"></ul>
+    <p id="save-status" role="status" aria-live="polite"></p>
+    <h2>Saved notes</h2>
+    <p id="empty-state">No saved notes yet.</p>
+    <ul id="note-list" aria-label="Saved notes"></ul>
   </main>
-  <script src="app.js"></script>
 </body>
 </html>

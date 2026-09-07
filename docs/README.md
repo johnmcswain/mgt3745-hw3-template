@@ -1,2 +1,3 @@
-Put screenshots and GIFs here. Reference them from the root README as `docs/filename.gif`.
-Keep GIFs under 5 MB. Name files for what they show: `save-and-render.gif` beats `recording1.gif`.
+# Evidence media
+
+Place your screenshot or GIF here and reference it from the root README. Use descriptive alt text and avoid personal information.
