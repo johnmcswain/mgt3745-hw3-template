@@ -11,9 +11,7 @@
 
 ## What
 
-[One paragraph: the problem, the user, and the feature you built.]
-
-For the full story: [`PROJECT.md`](context/PROJECT.md) frames the problem, [`FEATURES.md`](context/FEATURES.md) specifies what it must do.
+Replace this title and paragraph with your chosen feature and link [PROJECT.md](context/PROJECT.md) and [FEATURES.md](context/FEATURES.md). This runnable notes application is a teaching starter, not a completed student submission. Adapt it to your researched feature and make a meaningful change you can explain.
 
 ## See It Work
 
@@ -21,7 +19,7 @@ For the full story: [`PROJECT.md`](context/PROJECT.md) frames the problem, [`FEA
      Put media in the docs/ folder. Keep GIFs under 5 MB.
      Record: macOS Cmd+Shift+5, Windows Win+Alt+R or Snipping Tool video. Convert at ezgif.com.
      Markdown image syntax: -->
-
+Put a screenshot or GIF under docs/ and link it here with descriptive alt text. Explain which acceptance criterion it demonstrates. A screenshot does not prove reload or storage behavior by itself.
 ![Saving an entry and seeing it appear in the list](docs/demo.gif)
 
 <!-- HTML gives you sizing control markdown does not: -->
