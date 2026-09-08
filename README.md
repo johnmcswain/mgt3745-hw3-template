@@ -54,7 +54,7 @@ flowchart LR
   E --> F[render: redraw list]
 ```
 
-Three functions. `load` reads what persists, `save` writes it, `render` draws the current state. Everything else is wiring.
+Three functions. `load` reads what persists, `save` writes it, `render` draws the current state. Everything else in the src code is wiring.
 
 ## Status
 
