@@ -27,14 +27,15 @@ Put a screenshot or GIF under docs/ and link it here with descriptive alt text. 
 
 ## How to Run
 
+Create your repository from the instructor's HW3 template and name it `mgt3745-hw3`. The supplied app is a starter; adapt it to one feature from your own specification.
 This project runs inside a GitHub Codespace. No local install.
 
-1. On the repository page, click **Code → Codespaces → Create codespace on main**. First boot takes about a minute.
-2. In the file explorer, right-click `index.html` and choose **Open with Live Server**.
-3. A browser tab opens automatically at the forwarded port (`https://…-5500.app.github.dev`). If it does not, open the **Ports** tab in the terminal panel and click the globe icon next to port 5500.
-4. Edit any file; Live Server reloads the page on save.
+1. On your repository page, click **Code → Codespaces → Create codespace on main**. Wait for setup to finish; first-boot time varies.
+2. Keep the supplied `.devcontainer/devcontainer.json`. It configures Live Server installation and port 5500 forwarding. Once the extension is ready, right-click `index.html` and choose **Open with Live Server**, or use **Go Live**.
+3. If a browser tab does not open, use the **Ports** tab to open port 5500. Keep its visibility **Private**.
+4. With Live Server running, save your edits to reload the page.
 
-If the **Open with Live Server** command is unavailable, run `node scripts/serve.mjs`, open port 5500 from the Ports tab
+If Live Server is unavailable, run `node scripts/serve.mjs` in the terminal, then open port 5500 from the Ports tab. Refresh the browser after edits when using this fallback; stop it with **Ctrl+C**. Run only one server on port 5500 at a time. The fallback also works locally with Node 22 or later. Serve over HTTP rather than opening `index.html` through `file://`.
 
 <!-- The .devcontainer folder installs Live Server automatically. If the right-click option
      is missing, wait for the extension to finish installing (bottom-left status bar), or run
@@ -46,32 +47,41 @@ If the **Open with Live Server** command is unavailable, run `node scripts/serve
 <!-- GitHub renders Mermaid natively inside a ```mermaid fence. -->
 
 ```mermaid
-flowchart LR
-  A[User types entry] --> B[submit event]
-  B --> C[load: read localStorage]
-  C --> D[push new entry]
-  D --> E[save: write localStorage]
-  E --> F[render: redraw list]
+flowchart TD
+ A[Page opens] --> B[loadNotes: read and validate localStorage]
+  B --> C[renderNotes: draw current state]
+  D[User submits entry] --> E{Trimmed input is 1 to 200 characters?}
+  E -->|No| F[Show validation error and keep input]
+  E -->|Yes| G[Create proposed notes array]
+  G --> H{saveNotes: storage write succeeds?}
+  H -->|No| I[Show save error; keep input and current list]
+  H -->|Yes| J[Update in-memory notes]
+  J --> K[renderNotes: redraw list]
+  K --> L[Clear input and announce saved]
 ```
 
-Three functions. `load` reads what persists, `save` writes it, `render` draws the current state. Everything else in the src code is wiring.
+This diagram describes the starter's load-and-add flow. Update it to match your implementation. In `app.js`, `loadNotes` reads stored data, `saveNotes` attempts to persist a proposed state, and `renderNotes` draws the current state using `textContent` for user text. The submit handler validates input and updates the visible state only after a successful save. Delete also saves the proposed state before redrawing. A read failure shows a warning and starts with an empty in-memory list; it leaves the original storage unchanged until a successful new save replaces it.
 
 ## Status
 
 | Area | State | Why |
 |------|-------|-----|
-| Save and display | [Works / Partial / Broken] | |
-| Data survives reload | | |
-| Multi-user sync | Deferred | [ADR-001](context/ARCHITECTURE.md) chose localStorage; revisit in Module 4 |
+| Save and display | [Works / Partial / Broken / Not tested] | [Link your verification evidence] |
+| Invalid input | [Works / Partial / Broken / Not tested] | [Link your verification evidence] |
+| Data survives reload / storage failure | [Works / Partial / Broken / Not tested] | [Link your verification evidence] |
+| Multi-user sync (starter limitation) | Deferred | Browser-local storage does not provide sync. Explain your own scope and decision in [ADR-001](context/ARCHITECTURE.md). |
+
 
 <details>
 <summary>Verification results (click to expand)</summary>
 
-<!-- Paste or summarize the verification table from FEATURES.md. -->
+Keep the full verification record in [FEATURES.md](context/FEATURES.md). Summarize it here or link directly to its Verification section; keep both consistent.
 
-| # | Acceptance statement | Outcome |
-|---|----------------------|---------|
-| 1 | | |
+| Criterion / EARS statement | Steps and input | Expected result | Observed result | Status | Evidence / commit |
+|---|---|---|---|---|---|
+| [Your selected criterion ID] | [Reproducible procedure] | [State before testing] | [What actually happened] | [PASS / FAIL / CANNOT TEST / DEFERRED] | [Link] |
+
+Cover a normal action, relevant invalid input, and persistence or failure. PASS requires observed results that match expectations; all-PASS is acceptable with evidence. For CANNOT TEST, state the limitation and next step. Identify unselected requirements separately; DEFERRED does not waive the required HW3 feature. A screenshot alone cannot establish reload or storage-failure behavior.
 
 </details>
 
@@ -87,6 +97,9 @@ Read in this order:
 5. [`context/STANDARDS.md`](context/STANDARDS.md): the rules this code follows
 6. [`context/CLAUDE.md`](context/CLAUDE.md): the same rules, for agents
 
+The scaffold has **eleven canonical files in `/context`: six active files above and five previews**: [STYLE.md](context/STYLE.md), [TOOLS.md](context/TOOLS.md), [SKILLS.md](context/SKILLS.md), [EVALS.md](context/EVALS.md), and [AGENTS.md](context/AGENTS.md). Keep the previews; verification stays in FEATURES.md until EVALS.md activates in Module 5.
+
+Root README.md and the two instruction adapters—[CLAUDE.md](CLAUDE.md) and [.github/copilot-instructions.md](.github/copilot-instructions.md)—are additional files. Copy your HW2 USERS.md and FEATURES.md into `/context` and revise them using instructor feedback if available; otherwise record a peer criterion check and mark instructor feedback pending. Run `node scripts/check-scaffold.mjs` to check required file presence; this does not assess content quality.
 
 ## AI Use
 
