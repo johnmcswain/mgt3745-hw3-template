@@ -79,7 +79,7 @@ Three functions. `load` reads what persists, `save` writes it, `render` draws th
 
 Read in this order:
 
-0. [`scaffold manifest`](SCAFFOLD_MANIFEST.md): explains what carries over from HW2 into HW3, along with a submission checklist
+0. [`SCAFFOLD_MANIFEST.md`](SCAFFOLD_MANIFEST.md): explains what carries over from HW2 into HW3, along with a submission checklist
 1. [`context/PROJECT.md`](context/PROJECT.md): the problem and its framing
 2. [`context/USERS.md`](context/USERS.md): who this is for
 3. [`context/FEATURES.md`](context/FEATURES.md): what it must do, and verification results
