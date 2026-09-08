@@ -34,6 +34,8 @@ This project runs inside a GitHub Codespace. No local install.
 3. A browser tab opens automatically at the forwarded port (`https://…-5500.app.github.dev`). If it does not, open the **Ports** tab in the terminal panel and click the globe icon next to port 5500.
 4. Edit any file; Live Server reloads the page on save.
 
+If the **Open with Live Server** command is unavailable, run `node scripts/serve.mjs`, open port 5500 from the Ports tab
+
 <!-- The .devcontainer folder installs Live Server automatically. If the right-click option
      is missing, wait for the extension to finish installing (bottom-left status bar), or run
      `python3 -m http.server 5500` in the terminal and open port 5500 from the Ports tab.
