@@ -19,7 +19,7 @@ Replace this title and paragraph with your chosen feature and link [PROJECT.md](
      Put media in the docs/ folder. Keep GIFs under 5 MB.
      Record: macOS Cmd+Shift+5, Windows Win+Alt+R or Snipping Tool video. Convert at ezgif.com.
      Markdown image syntax: -->
-Put a screenshot or GIF under docs/ and link it here with descriptive alt text. Explain which acceptance criterion it demonstrates. A screenshot does not prove reload or storage behavior by itself.
+Put a screenshot or GIF under docs/ and link it here with descriptive alt text. Explain which acceptance criterion it demonstrates.
 ![Saving an entry and seeing it appear in the list](docs/demo.gif)
 
 <!-- HTML gives you sizing control markdown does not: -->
@@ -27,7 +27,7 @@ Put a screenshot or GIF under docs/ and link it here with descriptive alt text. 
 
 ## How to Run
 
-Create your repository from the instructor's HW3 template and name it `mgt3745-hw3`. The supplied app is a starter; adapt it to one feature from your own specification.
+Create your repository from the this HW3 template and name it `mgt3745-hw3`. The supplied app is a starter; adapt it to one feature from your own specification.
 This project runs inside a GitHub Codespace. No local install.
 
 1. On your repository page, click **Code → Codespaces → Create codespace on main**. Wait for setup to finish; first-boot time varies.
